@@ -8,6 +8,10 @@ body{
     padding-left: 50px;
 }
 
+.section {
+    padding-bottom: 3%;
+}
+
 h1{
     padding-top: 0;
     margin-top: 0;
@@ -39,6 +43,10 @@ h5{
     font-weight: 400;
     font-style: normal;
     font-size: 1.3em;
+}
+
+.top-title {
+    margin-top: 0;
 }
 
 p {
@@ -73,6 +81,21 @@ iframe{
         width: 100%;
         padding: 0;
     }
+}
+
+.two-col {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.two-col-left {
+    width: 47%;
+    padding-right: 6%;
+}
+
+.two-col-right {
+    width: 47%;
 }
 
 .quote-container {
