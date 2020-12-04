@@ -53,6 +53,14 @@ p {
     line-height: 1.5em;
 }
 
+li {
+    font-family: aktiv-grotesk-extended, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.1em;
+    line-height: 1.5em;
+}
+
 iframe{
     width: 100%;
 }
