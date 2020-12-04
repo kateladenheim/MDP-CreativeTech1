@@ -9,7 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js"></script>
     <script>
         
-        let urlKate = "https://api.particle.io/v1/devices/3b0034000147393033373334/therm_value?access_token=0725e4850e09dcd77263fb4eb3b2f83847384c81";
+        let urlKate = "https://api.particle.io/v1/devices/3b0034000147393033373334/therm_value?access_token=82e3fe3f9f236534b7070d6a81378d4bd2bfa12c";
 
         let urlChristie = "https://api.particle.io/v1/devices/2b0023001847393035313138/light_value?access_token=9bd94f45243608f78087ed47c3be88bb1a7ecade";
 
@@ -21,14 +21,9 @@
         let currentTime, prevTime;
         let valueKate = 1;
         let valueKate_smoothed = 1;
-        let valueChristie = 1;
-        let valueIsa = 1;
 
         var w = window.innerWidth;
         var h = window.innerHeight;
-
-        let pg;
-        //let christie_text;
 
         let a = 0.0;
         let s = 0.0;
@@ -40,33 +35,31 @@
         function setup() {
             createCanvas(w, h);
             textAlign(CENTER);
-          
-            pg = createGraphics(w,h);
-            //christie_text = createGraphics(w,h);
         }
 
         function draw() { 
           
-          background(61,62,64);
+          background(27,54,216);
 
             currentTime = millis () % 1000;
             if(currentTime < prevTime) {
                 dataKate = loadJSON(urlKate, processDataKate, handleError);
                 dataChristie = loadJSON(urlChristie, processDataChristie, handleError);
-              dataIsa = loadJSON(urlIsa, processDataIsa, handleError);
+                dataIsa = loadJSON(urlIsa, processDataIsa, handleError);
             }
             
-            pg.background("rgba(61,62,64,0.0)")
             valueKate_smoothed = lerp (valueKate_smoothed, valueKate, 0.05);
+            push();
             scale(1,valueKate_smoothed);
             textAlign(CENTER, CENTER);
             drawWords(width * 0.5);
+            pop();
           
-            image(pg, 0, 0, w, h);
-          
-            if (dataIsa.result = "above") {
+            push();
+            if (dataIsa.result == "above") {
               dontTouch();
             }
+            pop();
                     
             if (dataChristie.result > 1000) {
                 brightLights();
@@ -82,29 +75,33 @@
                 
             translate(width / 2, height / 2);
             scale(s);
-            fill(51);
+            fill(247,191,213);
             text("me", 0, 0);
+            textFont(bebasNeue);
             textSize(20);
                 
             translate(75, 0);
-            fill(255);
+            fill(248,83,13);
             scale(s);
             text("don't touch", 0, 0);
+            textFont(bebasNeue);
             textSize(20);
         }
 
         function brightLights () {
-            fill(128 + sin(frameCount*0.2) * 128);
+            fill(13 + sin(frameCount*0.2) * 13, 214 + sin(frameCount*0.2) * 214, 135 + sin(frameCount*0.2) * 135);
             textSize (40);
+            textFont(bebasNeue);
             text("BRIGHT", w / 3, h / 3);
                 
-            fill(128 + sin(frameCount*0.2) * 128);
+            fill(13 + sin(frameCount*0.2) * 13, 214 + sin(frameCount*0.2) * 214, 135 + sin(frameCount*0.2) * 135);
             textSize (40);
+            textFont(bebasNeue);
             text("LIGHTS!", (w / 3) * 2, (h / 3) * 2);
         }
 
         function drawWords(x) {
-            fill(209,210,211);
+            fill(255,255,255);
             textSize(170);
             textFont(bebasNeue);
             text('STREEEEEEETCH', x, 85);
