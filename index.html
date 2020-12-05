@@ -16,17 +16,17 @@
 
             <div class="section">
                 <div class="hw-section-title">
-                    <h2>Hark! A crappy robot!</h1>
+                    <h2>look! A crappy robot!</h1>
+                    <h3 class="top-title">goal:</h3>
+                    <p>To create an electronic creature that perceives its environment and communicates with other electronic creatures, created by Christie & Isabelle. These creatures would also send data to a web page that visually communicated some aspects of this data, and how the bots were connected.</p>
+                    <h3>Process</h3>
+                    <p>Obviously, I had a really rigorous concept out the gate, as well as an elegant plan that manifested itself seamlessly from start to finish. The following outlines the steps of said magnificent manifestation. ;-) </p>
                 </div>
                 <div class="two-col">
                     <div class="two-col-left">
                         <img src="MEDUSA.jpg" class="diagram-img"></img>
                     </div>
                     <div class ="two-col-right">
-                        <h3 class="top-title">goal:</h3>
-                        <p>To create an electronic creature that perceives its environment and communicates with other electronic creatures, created by Christie & Isabelle.</p>
-                        <h3>Process</h3>
-                        <p>Obviously, I had a really elegant plan for this whole thing from the outset that manifested itself seamlessly from start to finish. The following outlines the steps of said magnificent manifestation.</p>
                         <ul>
                             <li>
                                 Our first workshop helped me get a potentiometer and a pressure sensor hooked up to a website coded in p5.js where I could make a red circle expand and contract based on sensor data.
@@ -41,10 +41,13 @@
                                 Meanwhile, I tried to improve blobby guy by making the background color change, but also started getting woried that breath sensor and blobby guy weren't really hitting the brief. I researched parasitic and symbiotic relationships for creature models and electronic form factors, and had a really hard time landing on anything feasable and compelling given our time constraints and my budget constraints and the fact that my conductive rubber stretch cord still hadn't shown up. Much hand flapping occurred, in addition to spiraling questions around ability, planning, and self worth. 
                             </li>
                             <li>
-                                I decided to take stock of what I did have, which included several LED lights, potentiometers, a small hobby motor, diode, and transistor, and plenty of gaff and electrical tape. My concept morphed into a medusa of sorts, with a few dangling lights. When the stretch cord arrived, I could make it an attachment, and have a weight on it that the motor would shake, changing the amount of stretch. Finally — direction!
+                                I decided to take stock of what I did have, which included several LED lights, potentiometers, a small hobby motor, diode, and transistor, and plenty of gaff and electrical tape. I let go of the need for my creature to be dependent on or use date from my body, and thought also about what my teammates were trying to sense. Isabelle was using a flex sensor to notice touch, which would trigger a "don't touch me" warning light. Christie was using a photoresistor, which would impact a flocking pattern on screen. I started to think of ideas around visibility, masking, and sybtle motion. My concept morphed into a medusa of sorts, with a few dangling lights and a motor. The medusa would have a symbiotic relationship with Isabelle's warning lights, and when hers went on, so would mine. Christie's photoresistor would activate a hobby motor. When the stretch cord arrived, I could make it a dangling appendage, and attach a wait to it. When the motor activated, it would aggravate the stretch cord. A full two weeks from the brief, I had a solid direction. 
                             </li>
                             <li>
-                                Christie, Isabelle and I had an * i n p e r s o n * sociallly distant meet up where we managed to get our bot prototypes talking to each other, using potentiometers as sensors and lights as expressive elements. This formed the base code for our more complex creatures.
+                                Now, execution should be simple, right?
+                            </li>
+                            <li>
+                                Christie, Isabelle and I had a sociallly distant meet up where we managed to get our bot prototypes talking to each other, using potentiometers as sensors and lights as expressive elements. This formed the base code for our more complex creatures.
                             </li>
                             <li>
                                 My stretch cord arrived! But it came with alligator clips with no breadboard wires attached. I was able to clip breadboard wires to the conductive cord to do some testing, but my numbers were pretty wonky and the structure extremely unstable.
@@ -62,15 +65,32 @@
                                 After some more code wrangling and connectivity issues, I and the rest of my group got our proto bots happily communicating with each other.
                             </li>
                             <li>
-                                But wait! Remeber blobby guy? Well, blobby guy got the axe because he no longer had anything to do with my evolving medusa, now slowly taking shape. But evolving medusa <a href="https://kateladenheim.github.io/MDP-CreativeTech1/ecologies.html">had to express herself on the web somehow</a> — I took inspiration from my group's sensor mechanics and made little wordplays responding to stretching, touch-based warnings, and light sensitivity. 
-                            </li>
-                            <li>
-                                All in all, even though medusa has a kitchen bowl for a hat, and the motor is too weak to actually affect the stretch sensor, and blobby guy no longer exists, and my text website is conceptually facile, I did learn quite a bit from this project. Namely: the structural underpinnings of device communication; how to (smoothly!) morph text with p5.js; that push() and pop() can be used to effectively layer elements better than trying to add multiple scripts and divs to a p5.js web project; how to represent sensor-based data via p5.js; the merits of removing redundancies for the speed and efficiency of code; and that usually things are a hell of a lot simpler than I'm making them.
+                                But wait! Remeber blobby guy? Well, blobby guy got the axe because he no longer had anything to do with my evolving medusa, now slowly taking shape. But evolving medusa <a href="https://kateladenheim.github.io/MDP-CreativeTech1/ecologies.html">had to express herself on the web somehow</a> — I took further inspiration from my group's sensor mechanics and made little wordplays responding to stretching, touch-based warnings, and light sensitivity. 
                             </li>
                         </ul>
-                        <h3><a href="https://kateladenheim.github.io/MDP-CreativeTech1/ecologies.html">check out my kinda lame webpage with *typography*!</a></h3>
                     </div>
                 </div>
+
+                <div class="hw-section-title">
+                    <h3 class="top-title">outcomes</h3>
+                    <p>Medusa, in her current form, has a kitchen bowl for a hat, and the motor is too weak to actually affect the stretch sensor at all, and I'm using an extremely ugly keychain for the weight. Blobby guy has sadly disappeared to the depths of my archived code, and my text website looks okay but is maybe a little obvious</p>
+                    <p>But! I did learn quite a bit from this project. Namely: the structural underpinnings of device communication; how to (smoothly!) morph text with p5.js; that push() and pop() can be used to effectively layer elements better than trying to add multiple scripts and divs to a p5.js web project; how to represent sensor-based data via p5.js; the merits of removing redundancies for the speed and efficiency of code; and that usually things are a hell of a lot simpler than I'm making them. Check out the videos below to see medusa and the typographic website up and running.</p>
+                    <h3><a href="https://kateladenheim.github.io/MDP-CreativeTech1/ecologies.html">or check out the webpage here</a></h3>
+                </div>
+
+                <div class="three-col">
+                    <div class="three-col-left">
+                        <iframe src="https://player.vimeo.com/video/487464665" width="640" height="1138" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                    </div>
+                    <div class ="three-col-middle">
+                        <iframe src="https://player.vimeo.com/video/487460904" width="640" height="400" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                        <iframe src="https://player.vimeo.com/video/487460790" width="640" height="400" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                    </div>
+                    <div class = "three-col-right">
+                        <iframe src="https://player.vimeo.com/video/487461909" width="640" height="1138" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                    </div>
+                </div>
+
             </div>
 
         <div class="divider"></div>

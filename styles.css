@@ -102,6 +102,28 @@ iframe{
     width: 47%;
 }
 
+.three-col {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.three-col-left {
+    width: 30%;
+    padding-right: 3%;
+}
+
+.three-col-middle {
+    width: 30%;
+    padding-right: 3%;
+    align-self: center;
+}
+
+
+.three-col-right {
+    width: 30%;
+}
+
 .quote-container {
     display: flex;
     flex-direction: column;
